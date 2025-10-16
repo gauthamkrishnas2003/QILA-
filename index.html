@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QILA - The Grand Cultural Fiesta</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles based on your logo's color scheme (Red and Green) */
+        :root {
+            --primary-red: #E53935; /* Main Red color */
+            --secondary-green: #4CAF50; /* Main Green color */
+        }
+        .bg-college {
+            /* Using the uploaded college photo as the background */
+            background-image: url('uploaded:BAGROUND.jpg-bf17ddee-42a9-4e68-b4cd-9e5de586ef43');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .content-overlay {
+            /* Dark overlay for better text contrast against the image */
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+        }
+        /* Styles for the opening Logo Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+        }
+        .hidden-transition {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. SPLASH SCREEN: First thing the user sees -->
+    <div id="splash-screen">
+        <div class="animate-pulse">
+            <!-- Displaying the main logo -->
+            <img src="uploaded:LOGO.jpeg-fb94585d-ae7f-4b95-b8b0-d80312db8197" alt="QILA Event Logo" class="h-48 w-48 object-contain rounded-xl shadow-2xl">
+        </div>
+    </div>
+
+    <!-- 2. MAIN CONTENT CONTAINER -->
+    <div id="main-content" class="bg-college content-overlay flex flex-col pt-16 text-white">
+
+        <!-- FIXED HEADER & NAVIGATION -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 shadow-lg">
+            <nav class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+
+                <!-- Logo and Event Title -->
+                <div class="flex items-center space-x-3">
+                    <img src="uploaded:LOGO.jpeg-fb94585d-ae7f-4b95-b8b0-d80312db8197" alt="Logo" class="h-8 w-8 object-contain">
+                    <span class="text-xl font-extrabold" style="color: var(--primary-red);">QILA EVENT</span>
+                </div>
+
+                <!-- Navigation Links to separate HTML files -->
+                <div id="nav-links" class="flex flex-wrap justify-center text-sm font-medium space-x-2 md:space-x-4">
+                    <a href="index.html" class="nav-link bg-red-700 text-white p-2 rounded-lg transition duration-300">HOME</a>
+                    <a href="schedule.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">EVENT SCHEDULE</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">CONTACT DETAILS</a>
+                    <a href="map.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">EVENT MAP</a>
+                    <a href="champions.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">COLLEGE CHAMPIONS</a>
+                    <a href="champions_individual.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">INDIVIDUAL CHAMPIONS</a>
+                    <a href="results.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">RESULTS</a>
+                    <a href="announcements.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">ANNOUNCEMENTS</a>
+                    <a href="gallery.html" class="nav-link text-white hover:text-red-400 p-2 rounded-lg transition duration-300">GALLERY</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 3. MAIN BODY CONTENT (Following Your Sketch) -->
+        <main class="container mx-auto px-4 py-8 flex-grow flex flex-col items-center text-center">
+
+            <div class="bg-black bg-opacity-70 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full">
+
+                <!-- LOGO (Top) -->
+                <img src="uploaded:LOGO.jpeg-fb94585d-ae7f-4b95-b8b0-d80312db8197" alt="QILA Logo" class="h-24 w-24 object-contain mx-auto mb-6 rounded-xl shadow-lg">
+
+                <!-- EVENT NAME -->
+                <!-- Filter applied to make the black text in the uploaded image white against the dark background -->
+                <img src="uploaded:EVENT NAME.jpeg-5be30d5f-a8b1-4393-b150-c0b7f610af9d" alt="QILA Name" class="h-28 object-contain mx-auto mb-8" style="filter: brightness(0) invert(1);">
+
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-8" style="color: var(--primary-red); text-shadow: 2px 2px 4px #000;">The Grand Cultural Fiesta</h1>
+
+                <!-- TEXT DESCRIPTION BOX (Left Blank) - Uses Green Border for emphasis -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl border-4 border-dashed" style="border-color: var(--secondary-green);">
+                    <h2 class="text-2xl font-semibold mb-3" style="color: var(--secondary-green);">Event Description (To be filled later)</h2>
+                    <p class="text-lg text-gray-300 italic">
+                        [This area is reserved for the detailed description of the QILA event. Please add your text here later.]
+                        <br><br>
+                        *You can replace this placeholder text with your content anytime.*
+                    </p>
+                </div>
+
+                <!-- NAVIGATION SUMMARY (As drawn - centered list) -->
+                <div class="mt-10">
+                    <h2 class="text-2xl font-bold mb-4" style="color: var(--primary-red);">Site Navigation</h2>
+                    <div class="grid grid-cols-2 gap-4 text-left text-lg text-gray-200 font-medium max-w-xl mx-auto">
+                        <a href="schedule.html" class="hover:text-red-400 transition duration-300">1. EVENT SCHEDULE</a>
+                        <a href="contact.html" class="hover:text-red-400 transition duration-300">2. CONTACT DETAILS</a>
+                        <a href="map.html" class="hover:text-red-400 transition duration-300">3. EVENT MAP</a>
+                        <a href="champions.html" class="hover:text-red-400 transition duration-300">4. COLLEGE CHAMPIONS</a>
+                        <a href="champions_individual.html" class="hover:text-red-400 transition duration-300">5. INDIVIDUAL CHAMPIONS</a>
+                        <a href="results.html" class="hover:text-red-400 transition duration-300">6. RESULTS</a>
+                        <a href="announcements.html" class="hover:text-red-400 transition duration-300">7. ANNOUNCEMENTS</a>
+                        <a href="gallery.html" class="hover:text-red-400 transition duration-300">8. GALLERY</a>
+                    </div>
+                </div>
+
+                <!-- CONTACT DETAILS BOX (Left Blank) - Uses Red Border for emphasis -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl border-4 border-dashed mt-10" style="border-color: var(--primary-red);">
+                    <h2 class="text-2xl font-semibold mb-3" style="color: var(--primary-red);">Contact Details (To be filled later)</h2>
+                    <p class="text-lg text-gray-300 italic">
+                        [This section is reserved for the final contact information.]
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center p-4 bg-gray-900 bg-opacity-90 mt-8">
+            <p class="text-sm text-gray-400">© 2025 QILA Cultural Event.</p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT: Splash Screen Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const splashScreen = document.getElementById('splash-screen');
+            
+            // Wait 3 seconds to display the logo
+            setTimeout(() => {
+                splashScreen.classList.add('hidden-transition');
+                
+                // After the 1.5-second transition, remove the element entirely
+                setTimeout(() => {
+                    if (splashScreen.parentNode) {
+                        splashScreen.parentNode.removeChild(splashScreen);
+                    }
+                }, 1500);
+            }, 3000); 
+        });
+    </script>
+</body>
+</html>
